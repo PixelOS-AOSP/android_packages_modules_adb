@@ -853,6 +853,7 @@ cc_binary {
     target: {
         android: {
             shared_libs: [
+                "adbd_flags_c_lib",
                 "libbinder_ndk",
             ],
 
@@ -865,6 +866,7 @@ cc_binary {
 
         recovery: {
             exclude_shared_libs: [
+                "adbd_flags_c_lib",
                 "libadb_pairing_auth",
                 "libadb_pairing_connection",
                 "libbinder_ndk",
@@ -873,9 +875,6 @@ cc_binary {
             exclude_static_libs: [
                 "android_trade_in_mode_flags_cc_lib",
                 "adbroot_aidl_interface-ndk",
-            ],
-            shared_libs: [
-                "adbd_flags_c_lib",
             ],
         },
     },
